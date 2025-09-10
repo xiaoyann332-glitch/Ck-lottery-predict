@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CK Lottery Predictor</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f9; }
+    h1 { color: #333; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; border-radius: 8px; border: none; background: #4CAF50; color: white; cursor: pointer; }
+    button:hover { background: #45a049; }
+    #result { margin-top: 20px; font-size: 20px; font-weight: bold; color: #222; }
+  </style>
+</head>
+<body>
+  <h1>CK Lottery Predictor (Demo)</h1>
+  <p>နောက်ထွက်မယ့် နံပါတ်ကို ခန့်မှန်းကြည့်ပါ</p>
+  <button onclick="predict()">🎲 Predict Now</button>
+  <div id="result"></div>
+
+  <script>
+    function predict() {
+      const numbers = Math.floor(Math.random() * 10); // 0-9 random
+      const bigSmall = numbers >= 5 ? "Big" : "Small";
+      document.getElementById("result").innerText = "Prediction: " + numbers + " (" + bigSmall + ")";
+    }
+  </script>
+</body>
+</html>
